@@ -20,10 +20,11 @@ class ChildOnBooking(unittest.TestCase):
             pl.click()
             N = N - 1
 
+        driver.save_screenshot("screen.png")
        # self.assertIn("value", driver.find_element_by_xpath("//input[@id='group_children']"))
 
     def tearDown(self):
-        self.driver.close()
+        self.driver.quit()
 
 if __name__ == "__main__":
     unittest.main()
